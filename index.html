@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Cleaner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <article class="app-card">
+        <header class="app-header">
+            <h1 class="app-title" data-i18n="title">Boost your mobile by 50% with just 1-tap!</h1>
+            <time id="currentDate" class="app-date" data-i18n="date">Tuesday, 05 July, 2022</time>
+        </header>
+        
+        <section class="app-content">
+            <p class="app-description" data-i18n="description">
+                Magic Cleaner is a utility to speed up your phone and optimize performance. This speed booster makes full use of the accessibility service to thoroughly and durably stop the unnecessary process of running apps in background.
+            </p>
+            
+            <ul class="features-list">
+                <li class="feature-item">
+                    <span class="feature-icon">✓</span>
+                    <span data-i18n="feature1">Smart Memory Cleaner: Automatic junk file and cache removal</span>
+                </li>
+                <li class="feature-item">
+                    <span class="feature-icon">✓</span>
+                    <span data-i18n="feature2">Background App Killer: Stop battery-draining apps automatically</span>
+                </li>
+                <li class="feature-item">
+                    <span class="feature-icon">✓</span>
+                    <span data-i18n="feature3">Battery Saver Mode: Extend usage time by 40%</span>
+                </li>
+            </ul>
+            
+            <section class="instructions">
+                <div class="step">
+                    <span class="step-number">1.</span>
+                    <span class="step-content" data-i18n="step1">Tap "Download" button and install Magic Cleaner right now!</span>
+                </div>
+                <div class="step">
+                    <span class="step-number">2.</span>
+                    <span class="step-content" data-i18n="step2">Open application and enjoy!</span>
+                </div>
+            </section>
+        </section>
+        
+        <section class="download-section">
+            <div class="app-preview">
+                <img src="./img/app.png" alt="app-icon">
+            </div>
+            
+            <div class="download-actions">
+                <button id="downloadBtn" class="download-button" data-i18n="downloadButton">
+                    DOWNLOAD NOW
+                </button>
+                <div class="free-badge" data-i18n="freeBadge">100% FREE</div>
+            </div>
+        </section>
+        
+        <section class="timer-section">
+            <div class="timer-text">
+                <span data-i18n="timerText">You have</span> 
+                <span id="timer">20</span> 
+                <span id="secondsText" class="seconds-text"></span>
+                <span data-i18n="timerSuffix">to take advantage of this offer!</span>
+            </div>
+        </section>
+    </article>
+    <script src="./js/script.js"></script>
+</body>
+</html>

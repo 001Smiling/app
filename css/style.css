@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    color: #333;
+    background-color: #d9d9d9;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    opacity: 0;
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+.app-card {
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid #D1D1D1;
+    overflow: hidden;
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto;
+    transform: translateY(10px);
+    opacity: 0;
+    animation: slideUp 0.5s ease-out 0.2s forwards;
+    padding: 1.2rem 1.5rem;
+}
+
+@keyframes slideUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.app-header {
+    position: relative;
+    overflow: hidden;
+}
+
+.app-title {
+    color: #e69748;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+    position: relative;
+    line-height: 1.2;
+}
+
+.app-date {
+    color: #b5b5b6;
+    font-size: 0.85rem;
+    font-weight: 400;
+}
+
+.app-content {
+    padding: 1.2rem 0;
+}
+
+.app-description {
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 1.2rem;
+    line-height: 1.4;
+}
+
+.features-list {
+    list-style: none;
+    margin-bottom: 1.2rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0.6rem;
+    font-size: 0.85rem;
+    color: #444;
+}
+
+.feature-icon {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.6rem;
+    color: #fff;
+    font-weight: bold;
+    font-size: 0.7rem;
+}
+
+.instructions {
+    margin-bottom: 1.2rem;
+}
+
+.step-number {
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.step-content {
+    flex: 1;
+    color: #555;
+    line-height: 1;
+    font-size: 0.85rem;
+}
+
+.download-section {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.2rem;
+    align-items: center;
+}
+
+.app-preview {
+    width: 80px;
+    display: flex;
+    transition: all 0.2s ease;
+}
+
+.download-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.download-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, 
+        #4CAF50 0%, #2E7D32 25%, 
+        #2E7D32 50%, #1B5E20 75%, #1B5E20 100%);
+    background-size: 200% 100%;
+    background-position: 0% 0;
+    color: #fff;
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 30px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 3px 8px rgba(76, 175, 80, 0.2);
+    min-height: 42px;
+}
+
+.download-button:hover,
+.download-button:focus {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+    background-position: 100% 0;
+}
+
+.download-button:active {
+    transform: translateY(0);
+}
+
+.free-badge {
+    font-size: 1rem;
+    color: #b5b5b6;
+}
+
+.timer-section {
+    margin-top: 1.2rem;
+}
+
+.timer-text {
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+#timer {
+    color: #dc3545;
+    display: inline-block;
+}
+
+.seconds-text {
+    display: inline;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 0.8rem;
+    }
+    
+    .app-card {
+        max-width: 95%;
+    }
+    
+    .download-section {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+        gap: 1rem;
+    }
+    .download-actions {
+        width: 100%;
+        flex-direction: column;
+    }
+    .download-button {
+        width: 100%;
+    }
+    .app-content {
+        padding: 1rem 0;
+    }
+    
+    .timer-section {
+        margin-top: 1.2rem;
+    }
+    
+    .app-title {
+        font-size: 1.2rem;
+    }
+    
+    .app-preview {
+        width: 50%;
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 0.5rem;
+    }
+    
+    .app-card {
+        max-width: 100%;
+        padding: 1.2rem 1rem;
+    }
+    
+    .timer-section {
+        margin-top: 0.8rem;
+    }
+    
+    .app-description,
+    .feature-item,
+    .step-content {
+        font-size: 0.8rem;
+    }
+    
+    .download-button {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+    }
+    
+    .free-badge {
+        font-size: 0.9rem;
+    }
+}
